@@ -37,11 +37,14 @@ All results are averaged over 5 runs with statistical significance confirmed via
  🧪 Reproducing Results
 
  Prerequisites
-- Python ≥ 3.8
-- TensorFlow ≥ 2.13
-- scikit-learn ≥ 1.3
-- SHAP ≥ 0.42
-- pandas, numpy
+-numpy
+-pandas
+-scikit-learn
+-tensorflow>=2.10
+-shap
+-tqdm
+-xgboost
+
 
 Install dependencies:
 ```bash
@@ -55,22 +58,27 @@ CIC-IDS-2018  --  Kaggle (Preprocessed)
 
 
 Code Structure
-XAR-DNN/
-├── model/
-│   └── xar_dnn.py          
-├── utils/
-│   ├── preprocessing.py     
-│   └── adversarial.py      
-├── explainability/
-│   └── fsa.py               
+XAR-DNN-IoT-IDS/
+├── README.md                 ← one-line install & citation
+├── LICENSE                   ← MIT (open, no hassle)
+├── requirements.txt          ← PyTorch + SHAP + friends
+├── data/
+│   ├── README.md             ← how to get/unpack Edge-IIoTset, etc.
+│   └── .gitignore            ← never commit large *.csv
+├── src/
+│   ├── preprocess.py         ← z-score, label encode, 42 feats
+│   ├── model.py              ← XAR-DNN torch code (42 k params)
+│   ├── train.py              ← adversarial training loop (FGSM + PGD)
+│   ├── explain.py            ← SHAP + FSA calculator
+│   └── evaluate.py           ← McNemar, CIs, ROC, F1
+├── checkpoints/
+│   └── .gitkeep              ← placeholder for *.pt files
 ├── notebooks/
-│   └── XAR-DNN_Evaluation.ipynb  
-├── requirements.txt
-├── index.html               
-└── README.md
+│   └── quick_demo.ipynb      ← end-to-end on 1k samples
+└── CITATION.cff              ← auto-generated citation (GitHub shows it)
 
 
 🙏 Acknowledgements
-Datasets: Edge-IIoTset , NSL-KDD , CIC-IDS-2018
+Datasets: Edge-IIoTset, NSL-KDD, CIC-IDS-2018
 Frameworks: TensorFlow, SHAP, scikit-learn
 Computing: NVIDIA Tesla T4 (Kaggle), Raspberry Pi 4 (edge validation)
