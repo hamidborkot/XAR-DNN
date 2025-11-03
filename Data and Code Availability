@@ -1,0 +1,11 @@
+Data and Code Availability
+
+The primary dataset used in this study, Edge-IIoTset, is publicly available on IEEE DataPort at https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications (DOI: 10.1109/ACCESS.2022.3165809) and on Kaggle at https://www.kaggle.com/datasets/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot.
+
+The external validation datasets are also publicly available:
+
+NSL-KDD: Available from the Canadian Institute for Cybersecurity at https://www.unb.ca/cic/datasets/nsl.html.
+
+CIC-IDS-2018: Available from the Canadian Institute for Cybersecurity at https://www.unb.ca/cic/datasets/ids-2018.html.
+
+The source code developed for the XAR-DNN model, including data preprocessing, adversarial training, and Feature Stability Analysis (FSA), is available in a public GitHub repository at: [https://github.com/hamidborkot/XAR-DNN ].
