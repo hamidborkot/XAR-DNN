@@ -5,6 +5,7 @@ Official implementation of XAR-DNN: An Explainable and Adversarially Robust Deep
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![TensorFlow 2.13+](https://img.shields.io/badge/TensorFlow-2.13%2B-orange)](https://www.tensorflow.org/)
+Kaggle: https://www.kaggle.com/code/mdhamidborkottulla/notebook304f1cf782/edit
 
 This repository contains the official implementation of **XAR-DNN**, a novel deep learning framework that unifies adversarial robustness and explainable AI (XAI) for trustworthy intrusion detection in IoT and IIoT environments.
 
